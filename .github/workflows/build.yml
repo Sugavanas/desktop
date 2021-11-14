@@ -1,7 +1,7 @@
 name: 'Desktop - Build and Release'
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
