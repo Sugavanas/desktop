@@ -44,9 +44,6 @@ jobs:
       - name: Validate changelog
         run: yarn validate-changelog
 
-      - name: Ensure a clean working directory
-        run: yarn check-modified
-
       - name: Build production app
         run: yarn build:prod
         env:
