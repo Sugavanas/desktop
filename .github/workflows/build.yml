@@ -1,0 +1,24 @@
+name: 'Desktop - Build and Release'
+
+on:
+  workflow-dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+
+      - name: Install
+        run: |
+          npm install
+
+      - name: Package
+        run: npm run package
